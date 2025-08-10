@@ -1,3 +1,7 @@
 model PRODUCT {
-    id Int @id @default(autoincrement())
+  id Int @id @default(autoincrement())
+  name String
+  reference String
+  category String
+  subcategory String
 }
