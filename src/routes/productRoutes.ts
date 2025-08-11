@@ -1,9 +1,10 @@
 import { IRouter } from "express";
+import { ControllerModule } from "../types";
 
 const router: IRouter = require("express").Router();
 
-router.get("/products", (_, res) => {
-	res.send("TÁ FUNFANDO");
-});
+const productController:ControllerModule = require("../controllers/productControllers")
 
-export default router
+router.get("/products", productController.findAll);
+
+export default router;
